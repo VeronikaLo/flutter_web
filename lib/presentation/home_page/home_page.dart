@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/presentation/core/page_wrapper/page_template.dart';
+import 'package:flutter_web/presentation/home_page/widgets/multi_plattform.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -7,6 +8,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const PageTemplate(child: Placeholder());
+  List<Widget> partblocks = const [
+    MultiPlattform(),
+  ];
+
+    return  PageTemplate(
+      child: ListView.builder(
+        itemCount: partblocks.length,
+        itemBuilder: ((context, index) {
+          return partblocks[index];
+        })
+        
+        ),);
   }
 }
