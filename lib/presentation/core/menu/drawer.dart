@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/constants.dart';
+import 'package:flutter_web/presentation/core/buttons/get_started.dart';
 import 'package:flutter_web/presentation/core/menu/flutter_home_logo.dart';
+
+import 'menu_item.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -11,17 +14,36 @@ class CustomDrawer extends StatelessWidget {
       color: primaryDark,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20) ,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
           children: [
-            Row(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const FlutterHomeLogo(),
-                const Spacer(),
-                IconButton(
-                  onPressed: () { Navigator.of(context).pop(); }, 
-                  icon: const Icon(Icons.close, color: textPrimaryDark, size: 20,))
-              ],),
+                Row(
+                  children: [
+                    const FlutterHomeLogo(),
+                    const Spacer(),
+                    IconButton(
+                      onPressed: () { Navigator.of(context).pop(); }, 
+                      icon: const Icon(Icons.close, color: textPrimaryDark, size: 20,))
+                  ],),
+
+                const SizedBox(height: 40,),
+                const Menu_Item(text: 'Docs', inDrawer: true,),
+                const SizedBox(height: 20,),
+                const Menu_Item(text: 'Showcase', inDrawer: true,),
+                const SizedBox(height: 20,),
+                const Menu_Item(text: 'Development', inDrawer: true,),
+                const SizedBox(height: 20,),
+                const Menu_Item(text: 'Ecosystem', inDrawer: true,),
+              ],
+            ),
+            Column(
+              children: const [
+                Spacer(),
+                GetStartedButton(inDrawer: true ,),
+                SizedBox(height:20),
+              ],)
           ],
         ) ,),
     );

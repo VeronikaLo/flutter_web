@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/constants.dart';
 
 class GetStartedButton extends StatelessWidget {
-  const GetStartedButton({super.key});
+  final bool inDrawer;
+  const GetStartedButton({required this.inDrawer, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +20,15 @@ class GetStartedButton extends StatelessWidget {
             height: 40,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: primaryDark,
+              color: inDrawer? Colors.white : primaryDark,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+            child:  Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
                   'Get Started',
                   style: TextStyle(
-                      fontFamily: fontFamily, fontSize: 15, color: textPrimaryDark),
+                      fontFamily: fontFamily, fontSize: 15, color: inDrawer? primaryDark : textPrimaryDark),
                 )),
           ),
         ),

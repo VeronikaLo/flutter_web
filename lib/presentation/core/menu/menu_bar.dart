@@ -26,11 +26,11 @@ class MenuBar extends StatelessWidget {
         children: const[
           FlutterHomeLogo(),
           Spacer(),
-          Menu_Item(text: 'Docs'),
-          Menu_Item(text: 'Showcase'),
-          Menu_Item(text: 'Development'),
-          Menu_Item(text: 'Ecosystem'),
-          GetStartedButton(),
+          Menu_Item(text: 'Docs', inDrawer: false,),
+          Menu_Item(text: 'Showcase', inDrawer: false,),
+          Menu_Item(text: 'Development', inDrawer: false,),
+          Menu_Item(text: 'Ecosystem', inDrawer: false,),
+          GetStartedButton( inDrawer: false,),
         ]),
     );
   }
