@@ -27,17 +27,19 @@ class MultiPlattform extends StatelessWidget {
             ResponsiveRowColumnItem(
               rowFlex: 1,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
-                    children:  [
+                    children: [
                       Text(
                         'Multi-Plattform',
                         style: TextStyle(
                             color: Colors.lightBlue,
                             fontFamily: fontFamily,
-                            fontSize: responsiveValue.isLargerThan(TABLET)?  20 : 18,
+                            fontSize:
+                                responsiveValue.isLargerThan(TABLET) ? 20 : 18,
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
@@ -48,7 +50,8 @@ class MultiPlattform extends StatelessWidget {
                         style: TextStyle(
                             color: textPrimaryLight,
                             fontFamily: fontFamily,
-                            fontSize: responsiveValue.isLargerThan(TABLET)? 60 : 40,
+                            fontSize:
+                                responsiveValue.isLargerThan(TABLET) ? 60 : 40,
                             height: 0.9,
                             fontWeight: FontWeight.bold),
                       ),
@@ -60,23 +63,29 @@ class MultiPlattform extends StatelessWidget {
                         style: TextStyle(
                           color: textPrimaryLight,
                           fontFamily: fontFamily,
-                          fontSize: responsiveValue.isLargerThan(TABLET)?  20 : 18,
+                          fontSize:
+                              responsiveValue.isLargerThan(TABLET) ? 20 : 18,
                         ),
                       ),
                       const SizedBox(
                         height: 25,
                       ),
-                      const CalltoActionButton(text: 'See the target platform'),
+                      CalltoActionButton(
+                        text: 'See the target platform',
+                        callback: () {},
+                      ),
                     ]),
               ),
             ),
-
-            ResponsiveRowColumnItem( rowFlex: 1, child: Padding(
-              padding: EdgeInsets.symmetric(vertical:20, horizontal: responsiveValue.equals(TABLET)? 120 : 50 ),
-              child: Image.asset('assets/images/multi_plattform.png'),
-            )
-            ,),
-
+            ResponsiveRowColumnItem(
+              rowFlex: 1,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                    vertical: 20,
+                    horizontal: responsiveValue.equals(TABLET) ? 120 : 50),
+                child: Image.asset('assets/images/multi_plattform.png'),
+              ),
+            ),
           ]),
     );
   }

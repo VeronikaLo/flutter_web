@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
-class CalltoActionButton extends StatelessWidget {  // CalltoActionButton
+class CalltoActionButton extends StatelessWidget {
+  // CalltoActionButton
   final String text;
-  const CalltoActionButton({required this.text, super.key});
+  final Function callback;
+
+  const CalltoActionButton(
+      {required this.text, required this.callback, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +16,7 @@ class CalltoActionButton extends StatelessWidget {  // CalltoActionButton
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          print('cta pressed');
+          callback();
         },
         child: Material(
           elevation: 6,
@@ -26,12 +30,14 @@ class CalltoActionButton extends StatelessWidget {  // CalltoActionButton
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(color: primaryDark, width: 4),
               ),
-              child:   Padding(
-                  padding:  const EdgeInsets.symmetric(horizontal: 30),
+              child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Text(
                     text,
                     style: const TextStyle(
-                        fontFamily: fontFamily, fontSize: 15, color: primaryDark),
+                        fontFamily: fontFamily,
+                        fontSize: 15,
+                        color: primaryDark),
                   )),
             ),
           ),
