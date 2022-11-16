@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/presentation/core/page_wrapper/page_template.dart';
 import 'package:flutter_web/presentation/home_page/widgets/multi_plattform.dart';
 
+import '../core/page_wrapper/centered_constrained_wrapper.dart';
+
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   List<Widget> partblocks = const [
-    MultiPlattform(),
+    CenteredConstrainedWrapper(child: MultiPlattform()),
   ];
 
     return  PageTemplate(
