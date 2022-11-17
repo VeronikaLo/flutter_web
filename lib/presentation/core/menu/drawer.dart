@@ -29,13 +29,13 @@ class CustomDrawer extends StatelessWidget {
                   ],),
 
                 const SizedBox(height: 40,),
-                const Menu_Item(text: 'Docs', inDrawer: true,),
+                const Menu_Item(text: 'Docs', inDrawer: true, path: "",),
                 const SizedBox(height: 20,),
-                const Menu_Item(text: 'Showcase', inDrawer: true,),
+                const Menu_Item(text: 'Showcase', inDrawer: true, path: ""),
                 const SizedBox(height: 20,),
-                const Menu_Item(text: 'Development', inDrawer: true,),
+                const Menu_Item(text: 'Development', inDrawer: true, path: "/development"),
                 const SizedBox(height: 20,),
-                const Menu_Item(text: 'Ecosystem', inDrawer: true,),
+                const Menu_Item(text: 'Ecosystem', inDrawer: true, path: "/ecosystem"),
               ],
             ),
             Column(

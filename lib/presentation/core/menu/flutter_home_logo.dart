@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:routemaster/routemaster.dart';
 
 class FlutterHomeLogo extends StatelessWidget {
   const FlutterHomeLogo({super.key});
@@ -9,7 +10,7 @@ class FlutterHomeLogo extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          print('logo tapped');
+          Routemaster.of(context).push('/home');
         },
         child: Image.asset('assets/images/flutter_logo_text.png',
         height: 37,
