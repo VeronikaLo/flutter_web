@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp.router(
       routeInformationParser: const RoutemasterParser() ,
-      routerDelegate: RoutemasterDelegate(routesBuilder: (context) => routes ,) ,
+      routerDelegate: RoutemasterDelegate(routesBuilder: (context) => routes,) ,
       debugShowCheckedModeBanner: false,
       title: 'Flutter web',
       //home:  const HomePage(),
