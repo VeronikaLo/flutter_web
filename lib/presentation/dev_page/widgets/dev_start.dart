@@ -56,6 +56,17 @@ class DevStart extends StatelessWidget {
                   )),
             ],
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+            child: Text(
+              "Flutter transforms the app development process so you can ship more, faster. Deploy to six targets from a single codebase.",
+              style: TextStyle(
+                  color: textPrimaryLight,
+                  fontFamily: fontFamily,
+                  fontSize: responsiveValue.isLargerThan(TABLET) ? 38 : 22),
+              textAlign: TextAlign.center,
+            ),
+          ),
         ],
       )),
     );
