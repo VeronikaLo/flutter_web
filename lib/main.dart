@@ -4,6 +4,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:routemaster/routemaster.dart';
 import 'package:url_strategy/url_strategy.dart';
 
+import 'presentation/404_page/notfound_page.dart';
 import 'presentation/dev_page/dev_page.dart';
 import 'presentation/eco_page/eco_page.dart';
 
@@ -13,7 +14,7 @@ void main() {
 }
 
 final routes = RouteMap(
-  onUnknownRoute: (route) => const MaterialPage(child: HomePage()), //TODO: 
+  onUnknownRoute: (route) => const MaterialPage(child: NotFoundPage()), 
   routes: {
   '/' : (_) => const Redirect('/home'),
   '/home' : (_) => const MaterialPage(child: HomePage()),
