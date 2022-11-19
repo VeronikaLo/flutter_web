@@ -6,7 +6,9 @@ import 'package:url_strategy/url_strategy.dart';
 
 import 'presentation/404_page/notfound_page.dart';
 import 'presentation/dev_page/dev_page.dart';
+import 'presentation/docs_page/docs_page.dart';
 import 'presentation/eco_page/eco_page.dart';
+import 'presentation/showcase_page/showcase_page.dart';
 
 void main() {
   setPathUrlStrategy();
@@ -18,6 +20,8 @@ final routes = RouteMap(
   routes: {
   '/' : (_) => const Redirect('/home'),
   '/home' : (_) => const MaterialPage(child: HomePage()),
+  '/docs' : (_) => const MaterialPage(child: DocsPage()),
+  '/showcase' : (_) => const MaterialPage(child: ShowcasePage()),
   '/development' : (_) => const MaterialPage(child: DevPage()),
   '/ecosystem' : (_) => const MaterialPage(child: EcoPage()),
 } );

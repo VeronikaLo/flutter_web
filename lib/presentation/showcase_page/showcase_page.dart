@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/constants.dart';
 import 'package:flutter_web/presentation/core/page_wrapper/page_template.dart';
+
+import '../../constants.dart';
 
 // will be developed
 
-class DocsPage extends StatelessWidget {
-  const DocsPage({super.key});
+class ShowcasePage extends StatelessWidget {
+  const ShowcasePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class DocsPage extends StatelessWidget {
       alignment: Alignment.center,
       width: double.infinity,
       height: double.infinity,
-      color: Colors.green,
+      color: Colors.red,
       child: const Text('Under construction',
       textAlign: TextAlign.center, 
       style: TextStyle(fontSize: 50, fontFamily: fontFamily, fontWeight: FontWeight.bold),),),);
